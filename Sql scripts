@@ -1,0 +1,54 @@
+CREATE SCHEMA `timesheet` ;
+CREATE TABLE `timesheet`.`organisation` (
+  `org_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
+  `conatct_no` INT NULL,
+  `email` VARCHAR(45) NULL,
+  PRIMARY KEY (`org_id`));
+
+
+ADD COLUMN `email` VARCHAR(45) NULL AFTER `conatct_no`;
+  
+  
+  CREATE TABLE `timesheet`.`employee` (
+  `emp_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `join_date` DATE NULL,
+  `gender` VARCHAR(45) NULL,
+  `designation` VARCHAR(45) NULL,
+  `org_id` INT NULL,
+  PRIMARY KEY (`emp_id`),
+  INDEX `org_id_idx` (`org_id` ASC),
+  CONSTRAINT `org_id`
+    FOREIGN KEY (`org_id`)
+    REFERENCES `timesheet`.`organisation` (`org_id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+    ALTER TABLE `timesheet`.`employee` 
+ADD COLUMN `email` VARCHAR(45) NULL AFTER `org_id`;
+  
+  
+  CREATE TABLE `timesheet`.`login_credentials` (
+  `username` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  `login_id` INT NOT NULL,
+  PRIMARY KEY (`login_id`));
+  
+  
+  CREATE TABLE `timesheet`.`efforts` (
+  `effort_id` INT NOT NULL AUTO_INCREMENT,
+  `task_name` VARCHAR(45) NULL,
+  `task_desc` VARCHAR(50) NULL,
+  `task_date` DATE NULL,
+  `efforts` FLOAT NULL,
+  `emp_id` INT NULL,
+  PRIMARY KEY (`effort_id`),
+  INDEX `emp_id_idx` (`emp_id` ASC),
+  CONSTRAINT `emp_id`
+    FOREIGN KEY (`emp_id`)
+    REFERENCES `timesheet`.`employee` (`emp_id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+  

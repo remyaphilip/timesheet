@@ -1,0 +1,27 @@
+
+
+add organisation
+	name
+	id(auto -generated)
+	address
+	website
+add employees under organisation
+	id(auto generated)
+	name
+	join date
+	gender
+	designation
+add login credential table
+	username
+	password
+add tasks under employees
+	task id(auto generated)
+	task date
+	task name
+	task desc
+	effort
+display all records between specific dates for a specific id for a specific company
+functions available
+	generate user name and password
+	login facility
+	password

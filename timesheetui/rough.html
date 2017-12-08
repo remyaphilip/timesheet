@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TimesheetApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  
+ <!--<script src="‪C:\Users\Remya\workspace\timesheet\timesheetui\script.js" </script> -->
+ 
+ 
+ <script type="text/javascript">
+	$(document).ready(function(){
+	$(#add).click(function(){
+		$("#myModal").modal('show');
+	});
+	});
+</script>
+<style type="text/css">
+    .bs-example{
+    	position:relative;
+		
+		
+		width:870px;
+		
+    }
+	/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+	    .form-horizontal .control-label{
+		text-align:left;
+         padding-top: 2px;
+		 width: 150px;
+		    }
+			
+			.form-horizontal .form-control{
+         padding-top: 2px;
+		 width: 250px;
+		    }
+			 .btn-group{
+         padding-top: 2px;
+		 left:15px;
+		 
+		    }
+	
+</style>
+
+
+ </head>
+<body>
+  
+<div class="container">
+        <h2 style = "color:green">Timesheet </h2>       
+<nav class="navbar navbar-inverse" style = "background-color:green;color:white;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style = "color:white">Organisation Name</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-plus"></span> Add Employee</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+  
+  
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:green">
+			<h4 id="add" class="modal-title" style="color:white">Add Employee <i class="material-icons" style="color:white;float:right;margin-top:0px;" data-dismiss="modal">&#xe161;</i></h4>
+               
+				
+                
+            </div>
+            <div class="modal-body">
+                <div class="bs-example" >
+    <form class="form-horizontal" >
+        <div class="form-group">
+            <label for="EmployeeId" class="control-label col-xs-2">Employee Id</label>
+            <div class="col-xs-10">
+                <input type="Number" class="form-control" id="EmployeeId" placeholder="EmployeeId" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="EmployeeName" class="control-label col-xs-2">Employee Name</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" id="EmployeeName" placeholder="Name" required>
+            </div>
+        </div>
+		<div class="form-group">
+            <label for="Designation" class="control-label col-xs-2">Designation</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control" id="Designation" placeholder="Designation" required>
+            </div>
+        </div>
+		<div class="form-group">
+            <label for="Gender" class="control-label col-xs-2">Gender</label>
+			<div class="btn-group" style="margin-left:0px;>
+        <button type="button" data-toggle="dropdown" class="btn btn-default dropdown-toggle form-control">Select Gender <span class="caret" ></span></button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Male</a></li>
+            <li><a href="#">Female</a></li>
+            <li><a href="#">Other</a></li>
+        </ul>
+    </div>
+           
+        </div>
+		<div class="form-group">
+            <label for="startDate" class="control-label col-xs-2">Start Date</label>
+            <div class="col-xs-10">
+                <input type="date" class="form-control" id="Start Date" placeholder="" required>
+            </div>
+        </div>
+		       
+    </form>
+</div>
+
+            </div>
+       
+        </div>
+    </div>
+</div>
+  
+  
+  
+  
+  </div>
+
+</body>
+</html>
